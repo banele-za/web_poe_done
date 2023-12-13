@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0px;
+            }
+        .background-image {
+    background-image: url('images/background-images/coachback.jpeg');
+    background-size: 100% 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    }
+    .container {
+  position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+.cursor {
+  cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 110%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  background-color: yellow;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: yellowgreen;
+}
+.numbertext {
+  color: yellow;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: black;
+}
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.row {
+    background-color: yellow;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 16.66%;
+}
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+    </style>
+    
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <title>Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <nav>
+        <ul class="navigation">
+            <li><a href="index.html"><img src="images/org-logo/logo.png" width="75" height="75" alt="alt"/></a><li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+        </nav>
+        </div>
+        <div class="background-image"></div>
+        <div class="background-text">
+            
+        <h1>Gallery</h1>
+        <p>Below are the pictures we have taken while working towards our missions and goals, as well as what we have achieved.</p></div>
+        
+        <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+            <img src="images/gallery-images/20211023_133306.jpg" alt="" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+            <img src="images/gallery-images/pexels-michele-ferrari-4587189.jpg" alt="" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+            <img src="images/gallery-images/20211031_103407.jpg" alt="" style="width:450px; height: 450px">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+            <img src="images/gallery-images/20211031_103750.jpg" alt="" style="width:450px; height: 450px">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+            <img src="images/gallery-images/20211031_103820.jpg" alt="" style="width:450px; height: 450px">
+        </div>
+            <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+            <img src="images/gallery-images/20211031_104151.jpg" alt="" style="width:100%">
+        </div>
+            <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+            <img src="images/gallery-images/20211230_171854.jpg" alt="" style="width:100%">
+        </div>
+        </div>
+            
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="caption-container">
+        <p id="caption"></p>
+        </div>
+        
+    <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211023_133306.jpg" style="width:100%" onclick="currentSlide(1)" alt="The starting lineup for the 20/21 cup final.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/pexels-michele-ferrari-4587189.jpg" style="width:100%" onclick="currentSlide(2)" alt="One of our students in the extra class. Photo by michele Ferrari.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211031_103407.jpg" style="width:100%" onclick="currentSlide(3)" alt="Man of the match Junior posing with the trophy.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211031_103750.jpg" style="width:100%" onclick="currentSlide(4)" alt="Coach Mtshopi and Sipho standing with the trophy.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211031_103820.jpg" style="width:100%" onclick="currentSlide(5)" alt="Coach Banele and Sipho with the trophy.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211031_104151.jpg" style="width:100%" onclick="currentSlide(6)" alt="The whole squad that was present on the day.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery-images/20211230_171854.jpg" style="width:100%" onclick="currentSlide(7)" alt="View of the game from the stands.">
+    </div>
+    </div>
+    
+        <div class="back-colour">
+            <p>* Photos taken by Sizwe Makhawula</p>
+            <p>Also make sure to check some of our appearances on YouTube</p>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/7sSxF7EVA4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <section class="footer">
+            <div class="social">
+                <a href="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="snapchat.com"><i class="fab fa-snapchat"></i></a>
+                <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <ul class="footer-links">
+                <li>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="store.html">Shop</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Future Stars Development Club &copy; 2022
+            </p>
+        </section>
+        <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("demo");
+                let captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1;}
+                if (n < 1) {slideIndex = slides.length;}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                    }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <title>Get Involved</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <nav>
+        <ul class="navigation">
+            <li><a href="index.html"><img src="images/org-logo/logo.png" width="75" height="75" alt="alt"/></a><li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+        </nav>
+        </div>
+        <div class="background-image"></div>
+        <div class="background-text">
+        <h1>Get Involved</h1>
+        <p>We are always looking for support in any way shape or form so if you are interested please fill out this form and we'll make sure to get to you as soon as possible.</p></div>
+        <div class="back-colour">
+            <form name="OurForm" onsubmit="return lettersOnlyCheck(); return validateForm();">
+                <div>
+                    <h2>Personal Details</h2><br>
+                    <label for="Type">Support Type</label>
+                    <select name="Type" id="Type">
+                    <option value="Sponsor">Sponsor</option>
+                    <option value="Volunteer">Volunteer</option>
+                    <option value="Client">Client</option>
+                    </select><br>
+                    <label for="FirstName">First Name</label>
+                    <input type="text" name="First Name" id="FirstName" ><br>
+                    <label for="LastName">Last Name</label>
+                    <input type="text" name="Last Name" id="LastName" ><br>
+                    <label for="Email">Email</label>
+                    <input type="text" name="Email" id="Email" ><br>
+                </div><br>
+                <div>
+                    <h2>Other Enquiries</h2><br>
+                    <label for="OtherEnquiries">Other Enquiries</label>
+                    <textarea name="Other enquiries" id="OtherEnquiries"></textarea> 
+                </div><br>
+                <div>
+                    <h2>Newsletter</h2><br>
+                    <p>How often would you like us to send you emails regarding our upcoming events?</p>
+                    <input name="Mailing" type="radio" value="Daily" id="Daily" />
+                    <label for="Daily">Daily</label><br>
+                    <input name="Mailing" type="radio" value="Weekly" id="Weekly" />
+                    <label for="Weekly">Weekly</label><br>
+                    <input name="Mailing" type="radio" value="Monthly" id="Monthly" />
+                    <label for="Monthly">Monthly</label><br>
+                    <input name="Mailing" type="radio" value="Never" id="Never" />
+                    <label for="Never">Never</label><br>
+                </div>
+                <input name="submit" type="submit" onclick="lettersOnlyCheck(); validateForm();" value="Submit"/>
+                <input name="reset" type="reset" value="Reset"/>
+        </form></div>
+        <section class="footer">
+            <div class="social">
+                <a href="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="snapchat.com"><i class="fab fa-snapchat"></i></a>
+                <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <ul class="footer-links">
+                <li>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="store.html">Shop</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Future Stars Development Club &copy; 2022
+            </p>
+        </section>
+        
+        <script>
+            function lettersOnlyCheck() {
+                     let x = document.getElementById("FirstName").value;
+                     let y = document.getElementById("LastName").value;
+                     if(isNaN(x) || isNaN(y)) {
+                        return true;
+                     }
+                     else {
+                         return false;
+                     }
+            }
+            function validateForm() {
+                     let fname = document.forms["OurForm"]["FirstName"].value;
+                     let lname = document.forms["OurForm"]["LastName"].value;
+                     let ename = document.forms["OurForm"]["Email"].value;
+                     if (fname === "" || lname === "" || ename === "" || lettersOnlyCheck() === false) {
+                         alert("Please complete the whole form and make sure your names only contain letters");
+                    return false;
+                    }
+                    else {
+                        alert("Your information has been received and we will be in touch.");
+                        
+                    return true;
+            }
+        }
+        </script>
+    </body>
+</html>
